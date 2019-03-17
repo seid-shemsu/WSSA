@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/cus_name"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:textColor="#000"
+        android:hint="customer name"
+        android:fontFamily="casual"
+        android:textStyle="normal|bold" />
+
+    <Spinner
+        android:layout_height="60dp"
+        android:id="@+id/month"
+        android:layout_width="300dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:popupBackground="#55b4b0"
+        android:background="@drawable/round"
+        android:soundEffectsEnabled="false"
+        android:scrollbarStyle="insideOverlay" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:text="view bill"
+            android:id="@+id/viewbill"
+            android:layout_height="75dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:elevation="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/amount"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:textStyle="normal|bold"
+            android:textColor="#000"
+            android:hint="amount"
+            android:textAlignment="gravity"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginRight="10dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:text="pay"
+        android:layout_width="match_parent"
+        android:id="@+id/pay"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="#55b400"
+        android:textSize="36sp"
+        android:textColor="#fff"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
+
+    <Button
+        android:text="decline"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/decline"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/decline"
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
+
+</LinearLayout>

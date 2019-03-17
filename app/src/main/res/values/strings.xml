@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">WSSA</string>
+    <string-array name="month_amharic">
+        <item>መስከረም</item>
+        <item>ጥቅምት</item>
+        <item>ህዳር</item>
+        <item>ታህሳስ</item>
+        <item>ጥር</item>
+        <item>መጋቢት</item>
+        <item>የካቲት</item>
+        <item>ሚያዝያ</item>
+        <item>ግንቦት</item>
+        <item>ሰኔ</item>
+        <item>ሃምሌ</item>
+        <item>ነሃሴ</item>
+    </string-array>
+
+    <string-array name="month_english">
+        <item>jan</item>
+        <item>feb</item>
+        <item>mar</item>
+        <item>apr</item>
+        <item>may</item>
+        <item>jun</item>
+        <item>jul</item>
+        <item>aug</item>
+        <item>sep</item>
+        <item>oct</item>
+        <item>nov</item>
+        <item>dec</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp">
+
+
+    <Button
+        android:text="pay"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:id="@+id/payment"
+        android:layout_height="85dp"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#55b4f0"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:onClick="billing" />
+
+    <Button
+        android:text="history"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="36dp"
+        android:id="@+id/history"
+        android:textSize="30sp"
+        android:layout_below="@+id/payment"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#55b4f0"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:onClick="history" />
+
+    <Button
+        android:text="report"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="35dp"
+        android:id="@+id/report"
+        android:textSize="30sp"
+        android:layout_below="@+id/history"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#55b4f0"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:onClick="report" />
+
+    <Button
+        android:text="hlep"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:id="@+id/help"
+        android:layout_marginBottom="33dp"
+        android:textSize="30sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#55b4f0"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:onClick="help" />
+
+    </RelativeLayout>
