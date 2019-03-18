@@ -38,10 +38,8 @@ public class Payment  extends AppCompatActivity {
                 amount.setText(Integer.toString(b));
             }
         });
+
         name = (TextView) findViewById(R.id.cus_name);
-
-
-
         pay = (Button) findViewById(R.id.pay);
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
