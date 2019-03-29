@@ -29,6 +29,9 @@
         <item>nov</item>
         <item>dec</item>
     </string-array>
-
+    <string-array name="report">
+        <item>water cease</item>
+        <item>broken pipe</item>
+    </string-array>
 
 </resources>

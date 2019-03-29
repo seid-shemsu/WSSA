@@ -10,7 +10,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/bg"
     tools:context="com.example.seid.wssa.MainActivity">
 
     <ScrollView
@@ -20,13 +19,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/user"
+                />
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/InputUser"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginBottom="25dp">
 
 
@@ -35,8 +40,12 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:id="@+id/user"
+                    android:textColor="#000"
                     android:layout_weight="1"
-                    android:hint="username"/>
+                    android:drawableLeft="@drawable/users"
+                    android:drawableStart="@drawable/users"
+                    android:hint="  username"
+                    android:fontFamily="serif-monospace" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -51,7 +60,10 @@
                     android:inputType="textPassword"
                     android:id="@+id/pass"
                     android:layout_weight="1"
-                    android:hint="password"/>
+                    android:drawableStart="@drawable/lock"
+                    android:drawableLeft="@drawable/lock"
+                    android:hint="     password"
+                    android:fontFamily="serif-monospace" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -60,11 +72,13 @@
                 android:layout_height="80dp"
                 android:id="@+id/submit"
                 android:layout_width="200dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginLeft="80dp"
                 android:textSize="24sp"
+                android:background="@drawable/submit"
                 android:textColor="#fff"
-                android:background="#55b4b0"/>
+                android:shadowRadius="100"
+                android:fontFamily="serif-monospace" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

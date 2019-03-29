@@ -22,7 +22,7 @@ import java.util.Date;
 public class Database extends AsyncTask<String, Void, String> {
 
     Context ctx;
-
+    Payment payment;
     public Database(Context ctx) {
         this.ctx = ctx;
     }
@@ -52,7 +52,7 @@ public class Database extends AsyncTask<String, Void, String> {
             OS.close();
             InputStream IS = http.getInputStream();
             IS.close();
-            return "payment done successfully.";
+            return "paid";
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -69,6 +69,6 @@ public class Database extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(ctx,result,Toast.LENGTH_LONG).show();
+        Toast.makeText(ctx,result,Toast.LENGTH_SHORT).show();
     }
 }

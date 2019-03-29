@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="#ece5e5"
+    android:layout_margin="10dp">
+    
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="id"
+        android:id="@+id/role"
+        android:textAppearance="?android:textAppearanceLarge"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:id="@+id/month"
+        android:text="month"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/role"
+        android:textAppearance="?android:textAppearanceLarge"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="day"
+        android:id="@+id/day"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_toRightOf="@+id/month"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="amount"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/day"/>
+    
+</RelativeLayout>

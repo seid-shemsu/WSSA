@@ -4,9 +4,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue"
     >
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
     <TextView
         android:layout_width="match_parent"
         android:id="@+id/cus_name"
@@ -16,23 +19,29 @@
         android:textSize="30sp"
         android:textColor="#000"
         android:hint="customer name"
-        android:fontFamily="casual"
-        android:textStyle="normal|bold" />
-
-    <Spinner
-        android:layout_height="60dp"
-        android:id="@+id/month"
-        android:layout_width="300dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:textStyle="normal|bold"
         android:textAlignment="center"
-        android:padding="20dp"
-        android:popupBackground="#55b4b0"
-        android:background="@drawable/round"
-        android:soundEffectsEnabled="false"
-        android:scrollbarStyle="insideOverlay" />
+        android:gravity="center_vertical|center_horizontal"
+        android:fontFamily="serif-monospace" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_margin="20dp"
+       android:background="@drawable/spinner">
+
+       <Spinner
+           android:layout_height="60dp"
+           android:id="@+id/month"
+           android:layout_width="match_parent"
+           style="@style/Widget.AppCompat.Spinner.DropDown"
+           android:textAlignment="center"
+           android:layout_gravity="center"
+           android:soundEffectsEnabled="true"
+           android:scrollbarStyle="insideOverlay" />
+
+   </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -43,16 +52,18 @@
         android:layout_marginRight="10dp">
 
         <Button
-            android:text="view bill"
+            android:text="check bill"
             android:id="@+id/viewbill"
             android:layout_height="75dp"
             android:textSize="24sp"
-            android:textColor="#000"
+            android:textColor="#fff"
+            android:background="@drawable/noterror"
             android:layout_weight="1"
             android:layout_width="100dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="20dp"
-            android:elevation="1dp"/>
+            android:elevation="1dp"
+            android:fontFamily="serif-monospace" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,7 +76,8 @@
             android:hint="amount"
             android:textAlignment="gravity"
             android:gravity="center_vertical|center_horizontal"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:fontFamily="serif-monospace" />
 
     </LinearLayout>
 
@@ -75,11 +87,12 @@
         android:id="@+id/pay"
         android:layout_height="75dp"
         android:layout_marginTop="30dp"
-        android:background="#55b400"
+        android:background="@drawable/submit"
         android:textSize="36sp"
         android:textColor="#fff"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp" />
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:fontFamily="serif-monospace" />
 
     <Button
         android:text="decline"
@@ -87,10 +100,11 @@
         android:layout_height="75dp"
         android:id="@+id/decline"
         android:layout_marginTop="15dp"
-        android:background="@drawable/decline"
-        android:textColor="#000"
+        android:background="@drawable/error"
+        android:textColor="#ffffff"
         android:textSize="30sp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp" />
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:fontFamily="serif-monospace" />
 
 </LinearLayout>

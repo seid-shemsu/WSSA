@@ -1,70 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    android:paddingLeft="0dp"
-    android:paddingRight="0dp">
+    android:background="@drawable/blue">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
 
-    <Button
-        android:text="pay"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="24dp"
-        android:id="@+id/payment"
-        android:layout_height="85dp"
-        android:textSize="30sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#55b4f0"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:onClick="billing" />
+        android:layout_height="100dp"
+        android:layout_marginBottom="25dp">
 
-    <Button
-        android:text="history"
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:layout_marginTop="36dp"
-        android:id="@+id/history"
-        android:textSize="30sp"
-        android:layout_below="@+id/payment"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#55b4f0"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:onClick="history" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
-    <Button
-        android:text="report"
+        <Button
+            android:id="@+id/payment"
+            android:onClick="billing"
+            android:fontFamily="serif-monospace"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:text="make payment"
+            android:textAlignment="center"
+            android:drawableLeft="@drawable/money"
+            android:textColor="#fff"
+            android:textSize="22sp"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:background="@drawable/submit"/>
+
+        <Button
+            android:id="@+id/history"
+            android:onClick="history"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:text="view history"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:padding="15dp"
+            android:drawableLeft="@drawable/history"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:background="@drawable/submit"
+            android:fontFamily="serif-monospace" />
+        <Button
+            android:id="@+id/report"
+            android:onClick="report"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:text="make request"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:padding="15dp"
+            android:drawableLeft="@drawable/alert"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:background="@drawable/submit"
+            android:fontFamily="serif-monospace" />
+    </LinearLayout>
+</LinearLayout>
+    <!--LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:layout_marginTop="35dp"
-        android:id="@+id/report"
-        android:textSize="30sp"
-        android:layout_below="@+id/history"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#55b4f0"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:onClick="report" />
+        android:layout_height="180dp"
+        android:padding="20dp"
+        android:gravity="center">
 
-    <Button
-        android:text="hlep"
+        <Button
+            android:id="@+id/payment"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="pay"
+            android:layout_marginRight="10dp"
+            android:textSize="24sp"
+            android:background="@drawable/spinner"
+            android:onClick="billing" />
+
+        <Button
+
+            android:id="@+id/history"
+            android:onClick="history"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="history"
+            android:padding="15dp"
+
+            android:drawableLeft="@drawable/history"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:background="@drawable/spinner"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:id="@+id/help"
-        android:layout_marginBottom="33dp"
-        android:textSize="30sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#55b4f0"
-        android:layout_marginRight="60dp"
-        android:layout_marginLeft="60dp"
-        android:onClick="help" />
+        android:layout_height="180dp"
+        android:padding="20dp"
+        android:gravity="center">
 
-    </RelativeLayout>
+        <Button
+
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="report"
+            android:layout_marginRight="10dp"
+            android:textSize="24sp"
+            android:background="@drawable/spinner"
+            android:id="@+id/report"
+            android:onClick="report" />
+
+        <Button
+            android:id="@+id/help"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="help"
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp"
+            android:background="@drawable/spinner"
+
+            android:onClick="help" />
+
+    </LinearLayout-->

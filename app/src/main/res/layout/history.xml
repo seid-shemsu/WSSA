@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/blue"
     >
-
-    <android.support.v7.widget.RecyclerView
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_marginBottom="10dp">
 
-    </android.support.v7.widget.RecyclerView>
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="month"
+            android:layout_marginLeft="80dp"
+            android:gravity="center"
+            android:layout_weight="25"
+            android:textSize="24dp"
+            android:textColor="#000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="date"
+            android:gravity="center"
+            android:layout_weight="25"
+            android:textSize="24dp"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="amount"
+            android:gravity="center"
+            android:layout_weight="25"
+            android:textSize="24dp"
+            android:textColor="#000"
+            />
+    </LinearLayout>
+    <TableRow
+        android:layout_height="3dp"
+        android:layout_width="match_parent"
+        android:background="#000"
+        android:layout_marginBottom="5dp">
+    </TableRow>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview">
+
+    </ListView>
+
+</LinearLayout>
