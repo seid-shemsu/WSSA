@@ -17,20 +17,20 @@ import android.widget.Toast;
  */
 
 public class Welcome extends AppCompatActivity {
-    String name;
+    String cID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("WSSA");
-        toolbar.setNavigationIcon(R.drawable.back);
         toolbar.inflateMenu(R.menu.menu);
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                Intent i = new Intent(getBaseContext(),MainActivity.class);
-                startActivity(i);
+                Intent homeIntent = new Intent(Welcome.this,MainActivity.class);
+                homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(homeIntent);
                 return true;
             }
         });
@@ -43,18 +43,20 @@ public class Welcome extends AppCompatActivity {
 
     public void history(View view){
         Intent i = new Intent(this, History.class);
-        name = getIntent().getStringExtra("username");
-        i.putExtra("userName",name);
+        cID = getIntent().getStringExtra("cID");
+        i.putExtra("cID",cID);
         startActivity(i);
     }
     public void billing(View view){
         Intent i = new Intent(this, Payment.class);
-        name = getIntent().getStringExtra("username");
-        i.putExtra("userName",name);
+        cID = getIntent().getStringExtra("cID");
+        i.putExtra("cID",cID);
         startActivity(i);
     }
     public void report(View view){
         Intent i = new Intent(this, Report.class);
+        cID = getIntent().getStringExtra("cID");
+        i.putExtra("cID",cID);
         startActivity(i);
     }
 }

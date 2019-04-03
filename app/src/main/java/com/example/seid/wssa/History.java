@@ -28,14 +28,14 @@ public class History extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.history);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("WSSA");
-        toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setTitle("History");
         toolbar.inflateMenu(R.menu.menu);
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                Intent i = new Intent(getBaseContext(),MainActivity.class);
-                startActivity(i);
+                Intent homeIntent = new Intent(History.this,MainActivity.class);
+                homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(homeIntent);
                 return true;
             }
         });
@@ -51,9 +51,9 @@ public class History extends AppCompatActivity {
         try {
             LocalHistory dbHelper = new LocalHistory(this);
             SQLiteDatabase db = dbHelper.getReadableDatabase();
-            String name[] = {"name", "month", "day", "amount"};
-            String customer = getIntent().getStringExtra("userName");
-            Cursor c = db.query("history", name, "name=?", new String[]{customer}, null, null, null);
+            String name[] = {"id", "month", "day", "amount"};
+            String customer = getIntent().getStringExtra("cID");
+            Cursor c = db.query("history", name, "cID=?", new String[]{customer}, null, null, null);
 
             if (c.moveToFirst()) {
                 do {

@@ -16,7 +16,7 @@ public class LocalHistory extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table history(name text, month text, day text, amount text)");
+        db.execSQL("create table history(cID text, month text, day text, amount text)");
     }
 
     @Override
